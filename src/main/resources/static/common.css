@@ -1,0 +1,116 @@
+html {
+    min-width: 780px;
+    padding: 4px 30px 4px 30px;
+}
+
+body {
+    background: linear-gradient(45deg, rgb(207, 255, 230), rgb(251, 255, 227));
+}
+
+.header {
+    padding: 4px 0 4px 0;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.users {
+}
+/*.header span {*/
+/*    margin: 0 4px 0 4px;*/
+/*    padding: 4px 30px 4px 30px;*/
+/*    color: #ffffff;*/
+/*    background-color: #eee;*/
+/*    border: 1px solid #ddd;*/
+/*    border-radius: 3px;*/
+/*}*/
+
+.header a {
+    color: #fff !important;
+}
+
+/*.header span:hover {*/
+/*    background-color: #ddd;*/
+/*}*/
+
+#menu {
+    display: inline-block;
+}
+
+#login {
+    float: right;
+}
+
+span.username{
+    background-color: #00ff6f;
+    border-radius: 15px;
+    padding: 6px 22px;
+    margin-right: 10px;
+}
+
+.content {
+    min-height: calc(100vh - 100px);
+}
+
+.footer {
+    padding: 4px 0 4px 0;
+    background-color: #eee;
+    text-align: center;
+}
+
+h1 {
+    margin-left: 60px;
+    font-size: 3rem;
+}
+
+.table-list {
+    margin: 20px 30px 4px 0px;
+    border-collapse: collapse;
+    border: 1.5px solid black !important;
+}
+
+.table-list thead {
+    background: #bedeff;
+}
+
+.table-list th {
+    padding: 5px;
+    border: 1.5px solid black !important;
+}
+
+.table-list td {
+    padding: 4px;
+    border: 1.5px solid black !important;
+    border-top: 1.5px solid black !important;
+}
+
+.edit-form-table {
+    border: none;
+    margin-bottom: 16px;
+    min-width: 480px;
+}
+.edit-form-table td {
+    padding: 4px 12px 4px 12px;
+}
+
+.edit-form-table input {
+    width: 320px;
+}
+
+.error {
+    color: red;
+}
+
+.title {
+    color: red;
+}
+
+.form-select {
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}

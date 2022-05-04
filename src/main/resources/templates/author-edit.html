@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" type="text/css" href="/common.css" >
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Hello to Book</title>
+</head>
+<body th:with="menu='author-edit'">
+<div th:replace="_main::body"></div>
+<div th:remove="All">
+    <div th:fragment="allcontent">
+        <h1>Редактировать Автора</h1>
+        <form action="#"
+              th:action="@{/authors/save}"
+              th:object="${authorDto}"
+              method="post"
+              style="text-align: left">
+            <input type="hidden" th:field="*{id}" id="id">
+            <table class="edit-form-table">
+                <tbody>
+                <tr>
+                    <td>
+                        <label for="fullName">Фамилия Имя Отчество</label>
+                    </td>
+                    <td>
+                        <input class="form-control" type="text" th:field="*{fullName}" id="fullName" placeholder="Full Name">
+                    </td>
+                    <td>
+                        <span class="error" th:if="${#fields.hasErrors('fullName')}" th:errors="*{fullName}"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="birthday">Год рождения</label>
+                    </td>
+                    <td>
+                        <input class="form-control" type="text" th:field="*{birthday}" id="birthday" placeholder="yyyy" maxlength="4" pattern="^[1-9]\d*$">
+                    </td>
+                    <td>
+                        <span class="error" th:if="${#fields.hasErrors('birthday')}" th:errors="*{birthday}"></span>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+
+            <input class="btn btn-primary" type="submit" value="Сохранить изменения">
+        </form>
+    </div>
+</div>
+</body>
+</html>
